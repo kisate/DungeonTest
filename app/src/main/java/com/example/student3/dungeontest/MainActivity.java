@@ -6,6 +6,7 @@ import android.graphics.Paint;
 import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 
 import java.util.LinkedList;
 import java.util.Random;
@@ -17,5 +18,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Draw2D draw2d = new Draw2D(this);
         setContentView(draw2d);
+    }
+
+    public void onClick(View v) {
+        findViewById(R.id.draw).invalidate();
     }
 }

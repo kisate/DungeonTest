@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Point;
+import android.util.AttributeSet;
 import android.view.View;
 
 import java.util.LinkedList;
@@ -18,6 +19,10 @@ public class Draw2D extends View {
     private LinkedList<Edge> edges = new LinkedList<Edge>();
     public Draw2D(Context context) {
         super(context);
+    }
+
+    public Draw2D(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
     @Override
@@ -81,5 +86,9 @@ public class Draw2D extends View {
         if (t) return nextPoint(points);
         edges.add(new Edge(rand, res));
         return res;
+    }
+
+    public void onClick(View v) {
+        this.invalidate();
     }
 }
