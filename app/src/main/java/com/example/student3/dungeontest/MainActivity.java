@@ -16,8 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Draw2D draw2d = new Draw2D(this);
-        setContentView(draw2d);
+        setContentView(R.layout.activity_main);
     }
 
     public void onClick(View v) {
